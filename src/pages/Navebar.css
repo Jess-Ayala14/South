@@ -1,0 +1,9 @@
+nav{
+    z-index: 1;
+}
+
+nav .container a.navbar-brand img{
+    height: 30px;
+    width: auto;
+    margin-right: 35px;
+}
