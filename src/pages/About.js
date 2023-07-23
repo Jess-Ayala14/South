@@ -56,7 +56,7 @@ function About() {
                             distributors and other companies around the world. We have the ability to 
                             quote from your drawing and may already have in-house tooling to meet your 
                             custom turnings and space requirements.
-\                        </h4>
+                        </h4>
                     </Col>
                     <Col md={1} lg={2} />
                 </Row>
