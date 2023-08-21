@@ -27,25 +27,51 @@ div.Welcome {
     z-index: -1;
 }
 
-@keyframes move-welcome{
-    0% { opacity: 0; left: 0px; top: -135px;}
-    100% {opacity: 1; left: 0px; top: 0px;}
+@keyframes move-welcome {
+    0% {
+        opacity: 0;
+        left: 0px;
+        top: -135px;
+    }
+
+    100% {
+        opacity: 1;
+        left: 0px;
+        top: 0px;
+    }
 }
 
 div.Welcome .container {
     position: relative;
-    padding-top: 150px;
-    animation: 
-    move-welcome 4s;
+    padding-top: 250px;
+    /* animation: 
+    move-welcome 4s;*/
 }
 
-div.Welcome .container>img{
-    width: 600px;
+div.Welcome .container img.logo {
+    width: 575px;
     height: auto;
     padding-bottom: 50px;
 }
 
-div.Welcome .container .carousel-item img{
+div.Welcome .row.picture img.pic_welcome {
+    padding-top: 220px;
+    width: 300px;
+    height: auto;
+
+}
+
+div.welcome div.promotion {
+    margin-top: 180px;
+    height: 500px;
+ }
+
+div.Welcome div.promotion button {
+    border-radius: 30px;
+    margin-left: 20px;
+}
+
+div.Welcome .container .carousel-item img {
     width: 550px;
     height: auto;
     border-radius: 10px;
@@ -53,21 +79,31 @@ div.Welcome .container .carousel-item img{
 
 @media screen and (max-width: 550px) {
     div.Welcome .container {
-        padding-top: 75px;
+        padding-top: 88px;
     }
 
-    div.Welcome .container>img{
-        width:350px;
+    div.Welcome .container img.logo {
+        width: 250px;
         height: auto;
         padding-bottom: 105px;
     }
-    
-    div.Welcome .container .carousel-item img{
+/*
+    div.welcome div.promotion {
+       margin-top: 20px;
+       height: 350px;
+    }*/
+
+    div.Welcome div.promotion button {
+        border-radius: 30px;
+        margin-left: 22px;
+    }
+
+    div.Welcome .container .carousel-item img {
         width: 300px;
         height: auto;
     }
 }
 
-div.Welcome .container .pic_2.carousel-item  h4{
+div.Welcome .container .pic_2.carousel-item h4 {
     color: black;
 }

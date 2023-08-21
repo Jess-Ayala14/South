@@ -6,9 +6,6 @@ div.Blog {
 
 div.Blog .container {
     padding-top: 70px;
-    position: relative;
-    animation:
-        move-welcome 4s;
 }
 
 @media screen and (max-width: 550px) {
@@ -42,7 +39,21 @@ div.Blog .container .secondary h2 {
     padding-bottom: 15px;
 }
 
+div.Blog .container .tertiary{
+    padding-top: 70px;
+}
+
+div.Blog .container .tertiary .carousel img{
+    width: 350px;
+    height: auto;
+}
+
 @media screen and (max-width: 550px) {
+
+    div.Blog .container {
+        padding-top: 100px;
+    }
+
     div.Blog .container img {
         width: 100px;
         height: auto;
@@ -54,6 +65,15 @@ div.Blog .container .secondary h2 {
         height: auto;
         border: none;
     }
+
+    div.Blog .container .tertiary{
+        padding-top: 20px;
+    }
+    
+    div.Blog .container .tertiary .carousel img{
+        width: 225px;
+        height: auto;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -63,6 +83,7 @@ div.Blog .container .secondary h2 {
     div.Blog .container .secondary h2 {
         padding-left: 165px;
     }
+
 
     div.Blog .container img.logo {
         padding-top: 25px;

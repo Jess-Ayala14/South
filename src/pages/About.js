@@ -8,16 +8,16 @@ function About() {
 
     const AboutStyle = {
         backgroundImage:
-            "url('Dowels2.jpg')",
-        height: '95vh',
+            "url('about.jpg')",
+        height: '100vh',
         marginTop: '0px',
-        backgroundPosition: '50%',
+        backgroundPosition: '55%',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
     }
 
     return (
-        <div className='About' style={AboutStyle}>
+        <div className='About' id='About' style={AboutStyle}>
             <div className='container'>
                 <Row className='row-title'>
                     <Col md={1} lg={2} />

@@ -1,36 +1,19 @@
-div.Contact {
-    padding-top: 1px;
-    background-color: azure;
-    height: 100vh;
+
+div.Contact div.container{
+    padding-top: 35px;
 }
 
 div.Contact div.container img {
-    padding-top: 30px;
+    padding-top: 110px;
     width: 550px;
     height: auto;
-    position: relative;
-        animation:
-            move-welcome 4s;
-}
-
-@media screen and (max-width: 550px) {
-    div.Contact div.container img {
-        padding-top: 15px;
-        width: 300px;
-        height: auto;
-    }
 }
 
 div.Contact div.container .form {
-    margin-top: 20px;
-    padding-bottom: 45px;
+
     background-color: cornflowerblue;
     border-radius: 9px;
     border: 3px solid blue;
-    position: relative;
-    animation:
-        move-welcome 3.5s;
-
 }
 
 div.Contact div.container .form .content-form {
@@ -38,13 +21,28 @@ div.Contact div.container .form .content-form {
 }
 
 @media screen and (max-width: 550px) {
+    div.Contact div.container{
+        padding-top: 40px;
+    }
+
+    div.Contact div.container .row.logo{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    div.Contact div.container img {
+        padding-top: 0px;
+        width: 290px;
+        height: auto;
+    }
+
     div.Contact div.container .form {
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
     div.Contact div.container .form .content-form {
-        padding-top: 15px;
+        padding-top: 10px;
         padding-bottom: 0px;
     }
 }
@@ -55,7 +53,7 @@ div.Contact div.container .content-form label {
 }
 
 div.Contact div.container .form .content-form .form-group {
-    padding-top: 10px;
+    padding-top: 7px;
 }
 
 div.Contact div.container .form .content-form button {

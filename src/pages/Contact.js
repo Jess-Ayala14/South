@@ -1,12 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import { Container, Row, Button, Col, Form } from 'react-bootstrap';
-import InputGroup from 'react-bootstrap/InputGroup';
-import { SendEmailCommand, SESClient } from "@aws-sdk/client-ses";
 import './Contact.css'
 import Logo from '../Img/real-logo.png'
 
 const Contact = () => {
-
 
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
@@ -32,7 +29,7 @@ const Contact = () => {
     var params = {
       Destination: { /* required */
         ToAddresses: [
-          'alonsom@southwestdowel.com',
+          'alonsom@southwestdowel.com','aaront@southwestdowel.com',
           /* more items */
         ]
       },
@@ -82,18 +79,29 @@ const Contact = () => {
     } else if (form.checkValidity() === true) {
       contact_ = 'New message from:\n\n' + 'Contact: ' + fname.charAt(0).toUpperCase() + fname.slice(1) + ' ' + lname.charAt(0).toUpperCase() + lname.slice(1) + '\n' + (cname ? 'Company name: ' + cname.charAt(0).toUpperCase() + cname.slice(1) + '\n' : '') + 'email: ' + email + '\n';
       bodymessage = contact_ + '\n' + 'Message:' + textMessage;
-      sendMessage(bodymessage, email)
+      sendMessage(bodymessage, email);
+      alert("Sent Successfully");
     }
+    
   };
 
+  const ContactStyle = {
+    backgroundImage:
+      "url('contact.jpg')",
+    height: '100vh',
+    marginTop: '0px',
+    backgroundPosition: '55%',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat'
+  }
+
   return (
-    <div className='Contact'>
+    <div className='Contact' id="Contact" style={ContactStyle}>
       <Container>
-        <Row>
+        <Row className='logo'>
           <Col xs={1} md={1} lg={2} />
           <Col xs={10} md={5}>
             <img src={Logo} alt='Logo' />
-            <h4>{process.env.AWS_SECRET_ACCESS_KEY}</h4>
           </Col>
           <Col xs={1} md={5} />
         </Row>
@@ -163,10 +171,8 @@ const Contact = () => {
                     />
                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                   </Form.Group>
-
                   <br />
                   <Button variant="info" type="submit">Send</Button>
-
                 </Col>
                 <Col xs={1} md={2} />
               </Row>

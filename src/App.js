@@ -12,16 +12,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Navebar />
-        <Routes>
-          <Route path='/' element={<Welcome />} />
-          <Route path="/about" element={<About />} />
-          <Route path="blog" element={<Blog />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NoPage />} />
-        </Routes>
-      </Router>
+      <Navebar />
+      <Welcome />
+      <About />
+      <Blog />
+      <Contact />
     </div>
   );
 }
