@@ -1,5 +1,7 @@
-import { useState} from 'react';
+import { useState, useEffect } from 'react';
 import { Container, Row, Button, Col, Form } from 'react-bootstrap';
+import InputGroup from 'react-bootstrap/InputGroup';
+import { SendEmailCommand, SESClient } from "@aws-sdk/client-ses";
 import './Contact.css'
 import Logo from '../Img/real-logo.png'
 
