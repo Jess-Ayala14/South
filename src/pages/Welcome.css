@@ -18,116 +18,189 @@
     text-align: right;
 }
 
-.text-justify {
-    text-align: justify;
-}
-
-div.Welcome {
-    height: 100vh;
+.Welcome {
+    min-height: 100vh;
+    position: relative;
     z-index: -1;
 }
 
 @keyframes move-welcome {
+
     0% {
         opacity: 0;
-        left: 0px;
-        top: -135px;
+        transform: translateY(-135px);
     }
 
     100% {
         opacity: 1;
-        left: 0px;
-        top: 0px;
+        transform: translateY(0);
     }
+
 }
 
-div.Welcome .container {
+.Welcome .container {
     position: relative;
-    padding-top: 250px;
-    /* animation: 
-    move-welcome 4s;*/
+    padding-top: 180px;
+
+    /* animation: move-welcome 4s; */
 }
 
-div.Welcome .container img.logo {
-    width: 575px;
+.Welcome .container img.logo {
+    width: 100%;
+    max-width: 575px;
+
     height: auto;
+
     padding-bottom: 50px;
 }
 
-div.Welcome .row.picture img.pic_welcome {
-    padding-top: 220px;
-    width: 300px;
+.Welcome .row.picture img.pic_welcome {
+    width: 100%;
+    max-width: 300px;
+
     height: auto;
 
+    padding-top: 220px;
 }
 
-div.welcome div.promotion {
-    margin-top: 180px;
-    height: 500px;
+.Welcome .promotion {
+
+    width: 100%;
+
+    position: relative;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+
+    min-height: 650px;
+
+    margin-top: 120px;
 }
 
-div.Welcome div.promotion button {
+.Welcome .promotion button {
     border-radius: 30px;
     margin-left: 20px;
 }
 
-div.Welcome .container .carousel-item img {
-    width: 550px;
+.Welcome .container .carousel-item img {
+    width: 100%;
+    max-width: 550px;
+
     height: auto;
+
     border-radius: 10px;
 }
 
-@media screen and (max-width: 550px) {
-    div.Welcome .container {
-        padding-top: 88px;
+/* Mobile */
+@media screen and (max-width: 767px) {
+
+    .Welcome .container {
+        padding-top: 90px;
     }
 
-    div.Welcome .container img.logo {
-        width: 250px;
-        height: auto;
-        padding-bottom: 105px;
+    .Welcome .container img.logo {
+        max-width: 250px;
+        padding-bottom: 80px;
     }
 
-    div.Welcome div.promotion button {
-        border-radius: 30px;
-        margin-left: 22px;
+    .Welcome .row.picture img.pic_welcome {
+        max-width: 220px;
+        padding-top: 40px;
     }
 
-}
+    .Welcome .promotion {
 
-
-div.Welcome .promotion {
-    background-position: 100%;
-    margin-top: 180px;
-    height: 550px;
-
-}
-
-@media screen and (min-width: 375px) and (max-width: 390px),
-(max-height: 850px) {
-
-    div.Welcome .promotion {
-        background-position: 150px;
-        margin-top: 50px;
-        height: 550px;
+        background-position: center top;
+        background-size: cover;
+        min-height: 590px;
+        margin-top: 160px;
+        padding-top: 30px;
     }
 
 }
 
-@media screen and (min-width: 768px) and (max-width: 880px) and (max-height: 1180px) {
-    div.Welcome .promotion {
-        background-position: 450px;
-        margin-top: 186px;
-        height: 750px;
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .Welcome .container {
+        padding-top: 140px;
+    }
+
+    .Welcome .container img.logo {
+        max-width: 420px;
+    }
+
+    .Welcome .row.picture img.pic_welcome {
+        max-width: 260px;
+        padding-top: 80px;
+    }
+
+    .Welcome .promotion {
+
+        background-position: right -120px center;
+        background-size: contain;
+        min-height: 800px;
+        margin-top: 340px;
 
     }
+
 }
 
-@media screen and (min-width: 881px) and (max-width: 1280px)  and (max-height: 720px) {
-    div.Welcome .promotion {
-        background-position: 100%;
-        margin-top: 0px;
-        height: 550px;
+/* Desktop */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
 
+    .Welcome .container {
+        padding-top: 180px;
     }
+
+    .Welcome .promotion {
+
+        background-position: right center;
+        background-size: contain;
+        min-height: 700px;
+        margin-top: 100px;
+    }
+
+}
+
+/* Large Desktop */
+@media screen and (min-width: 1441px) {
+
+    .Welcome .container {
+        padding-top: 220px;
+    }
+
+    .Welcome .container img.logo {
+        max-width: 650px;
+    }
+
+    .Welcome .row.picture img.pic_welcome {
+        max-width: 360px;
+        padding-top: 180px;
+    }
+
+    .Welcome .promotion {
+
+        background-position: right 80px center;
+        background-size: contain;
+
+        min-height: 850px;
+
+        margin-top: 140px;
+    }
+
+}
+
+/* Small Height Screens */
+@media screen and (max-height: 720px) {
+
+    .Welcome .container {
+        padding-top: 100px;
+    }
+
+    .Welcome .promotion {
+        margin-top: 20px;
+    }
+
 }

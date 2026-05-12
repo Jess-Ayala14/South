@@ -22,7 +22,8 @@ class Welcome extends Component {
       backgroundImage:
         "url('dowel.png')",
       backgroundRepeat: 'no-repeat',
-      backgroundSize: 'contain'
+      backgroundSize: 'contain',
+      backgroundPosition: 'right 0 bottom -0px'
     }
 
     return (

@@ -27,17 +27,17 @@ function Blog() {
           <h1>Our Products</h1>
         </Row>
         <Row className='dowel_pic'>
-          <Col xs={0} md={1} lg={1} />
+          <Col xs={0} md={0} lg={1} />
           <Col xs={4} md={4} lg={3}>
             <Image src={holder} rounded />
           </Col>
           <Col xs={4} md={4} lg={3}>
             <Image src={holder1} rounded />
           </Col>
-          <Col xs={4} md={1} lg={3}>
+          <Col xs={4} md={4} lg={3}>
             <Image src={holder2} rounded />
           </Col>
-          <Col xs={0} lg={1} />
+          <Col xs={0} md={0} lg={1} />
         </Row>
         <Row className='text text-left'>
           <h3>
