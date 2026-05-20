@@ -1,75 +1,102 @@
 import React from 'react';
-import { Row, Col, Carousel }
-  from 'react-bootstrap';
-import pic from "../Img/carousel/clamshell.png";
-import pic1 from "../Img/carousel/extrusions.jpg";
-import pic3 from "../Img/carousel/tubing.jpg";
-import pic4 from "../Img/carousel/tubingB.png";
-import pic2 from "../Img/carousel/mushroom.jpg";
-import pic5 from "../Img/carousel/tubingG.png";
-import pic6 from "../Img/carousel/wood.png";
-import pic7 from "../Img/carousel/TubingV.jpg";
+import { Row, Col, Carousel } from 'react-bootstrap';
+
+import pic from "../Img/carousel/clamshell-1.png";
+import pic1 from "../Img/carousel/extrusions-1.png";
+import pic2 from "../Img/carousel/mushroom-1.png";
+import pic3 from "../Img/carousel/tubing-1.png";
+import pic4 from "../Img/carousel/tubingB-1.png";
+import pic5 from "../Img/carousel/tubingG-1.png";
+import pic6 from "../Img/carousel/wood-1.png";
+import pic7 from "../Img/carousel/TubingV-1.png";
 
 const Carousell = () => {
   return (
-    <div>
-      <Row className='tertiary'>
-        <Col xs={2} lg={3} />
-        <Col xs={8} lg={6} >
-          <Carousel>
+    <Row className="justify-content-center">
+      <Col xs={12} md={8} lg={6}>
+
+        <div className="carousel-fixed">
+
+          <Carousel interval={3000} controls={true} indicators={true}>
+
             <Carousel.Item>
-              <img src={pic} />
+              <div className="carousel-frame">
+                <img src={pic} alt="Clam Shell" />
+              </div>
               <Carousel.Caption>
-                <h5 style={{ color: "black" }}>Clam Shell</h5>
+                <h5>Clam Shell</h5>
               </Carousel.Caption>
             </Carousel.Item>
+
             <Carousel.Item>
-              <img src={pic1} />
+              <div className="carousel-frame">
+                <img src={pic1} alt="Extrusions" />
+              </div>
               <Carousel.Caption>
-                <h6 style={{ color: "white" }}> Rubber Extrusions</h6>
+                <h6>Rubber Extrusions</h6>
               </Carousel.Caption>
             </Carousel.Item>
+
             <Carousel.Item>
-              <img src={pic2} />
+              <div className="carousel-frame">
+                <img src={pic2} alt="Wood Plugs" />
+              </div>
               <Carousel.Caption>
-                <h5 style={{ color: "black" }}>Wood Plugs</h5>
+                <h5>Wood Plugs</h5>
               </Carousel.Caption>
             </Carousel.Item>
+
             <Carousel.Item>
-              <img src={pic3} />
+              <div className="carousel-frame">
+                <img src={pic3} alt="Tubing" />
+              </div>
               <Carousel.Caption>
-                <h6 style={{ color: "black", marginLeft:"30px" }}>Polymar Tubing</h6>
+                <h6>Polymer Tubing</h6>
               </Carousel.Caption>
             </Carousel.Item>
+
             <Carousel.Item>
-              <img src={pic4} />
+              <div className="carousel-frame">
+                <img src={pic4} alt="Blue Tubing" />
+              </div>
               <Carousel.Caption>
-                <h5 style={{ color: "black" }}>Blue Tubing</h5>
+                <h5>Blue Tubing</h5>
               </Carousel.Caption>
             </Carousel.Item>
+
             <Carousel.Item>
-              <img src={pic5} />
+              <div className="carousel-frame">
+                <img src={pic5} alt="Green Tubing" />
+              </div>
               <Carousel.Caption>
-                <h5 style={{ color: "white", marginRight: "60px" }}>Green Tubing</h5>
+                <h5>Green Tubing</h5>
               </Carousel.Caption>
             </Carousel.Item>
+
             <Carousel.Item>
-              <img src={pic6} />
+              <div className="carousel-frame">
+                <img src={pic6} alt="Dowel Pins" />
+              </div>
               <Carousel.Caption>
-                <h5 style={{ color: "black" }}>Dowel Pins</h5>
+                <h5>Dowel Pins</h5>
               </Carousel.Caption>
             </Carousel.Item>
+
             <Carousel.Item>
-              <img src={pic7} />
+              <div className="carousel-frame">
+                <img src={pic7} alt="Variety" />
+              </div>
               <Carousel.Caption>
-                <h6 style={{ color: "white" }}>Variety</h6>
+                <h6>Variety</h6>
               </Carousel.Caption>
             </Carousel.Item>
+
           </Carousel>
-        </Col>
-        <Col xs={2} lg={3} />
-      </Row>
-    </div>
+
+        </div>
+
+      </Col>
+    </Row>
   );
 };
 

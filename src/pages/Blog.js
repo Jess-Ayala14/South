@@ -1,57 +1,119 @@
 import React from 'react';
-import { Image, Row, Col, Container}
-  from 'react-bootstrap';
+import { Image, Row, Col, Container, Button, Card } from 'react-bootstrap';
 import Carousell from './Carousell';
-import './Blog.css'
+import './Blog.css';
+
 import holder from '../Img/dowel_pic.jpg';
 import holder1 from '../Img/dowel_pic1.jpg';
 import holder2 from '../Img/dowel_pic2.jpg';
-import logo from '../Img/real-logo.png'
+import banner from '../Img/real-logo.png'
 
 function Blog() {
 
+  const products = [
+    {
+      image: holder,
+      title: 'Dowel Pins',
+      text: 'High-quality dowel pins for strong and reliable joints.',
+      details: 'Excellent resistance and precision for industrial assembly'
+    },
+    {
+      image: holder1,
+      title: 'Bulk Packaging',
+      text: 'Secure and efficient packaging for industrial transportation.',
+      details: 'Optimized for safe shipping and large-volume storage.'
+    },
+    {
+      image: holder2,
+      title: 'Wood Dowels',
+      text: 'Precision-crafted dowels for multiple applications.',
+      details: 'Manufactured with premium wood for superior durability.'
+    }
+  ];
+
   const BlogStyle = {
-    backgroundImage:
-      "url('products.jpg')",
-    height: '100vh',
+    backgroundImage: "url('products.jpg')",
+    minHeight: '100vh',
+    height: 'auto',
     marginTop: '0px',
     backgroundPosition: '55%',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat'
-  }
+  };
 
   return (
     <div className='Blog' id="Blog" style={BlogStyle}>
       <Container>
-        <Row className='text-left'>
-          <h1>Our Products</h1>
-        </Row>
-        <Row className='dowel_pic'>
-          <Col xs={0} md={0} lg={1} />
-          <Col xs={4} md={4} lg={3}>
-            <Image src={holder} rounded />
+
+        {/* TITLE */}
+        <Row>
+          <Col>
+            <div className='blog-header'>
+              <h1>Our Products</h1>
+            </div>
           </Col>
-          <Col xs={4} md={4} lg={3}>
-            <Image src={holder1} rounded />
+        </Row>
+
+        {/* PRODUCTS */}
+        <Row className='product-row'>
+          {products.map((product, index) => (
+            <Col key={index} xs={12} md={4} lg={4} className='mb-4'>
+              <Card className='product-card'>
+                <div className='product-image-wrapper'>
+                  <Image src={product.image} alt={product.title} fluid />
+                </div>
+
+                <Card.Body>
+                  <Card.Title>{product.title}</Card.Title>
+                  <Card.Text>{product.text}</Card.Text>
+                  <div className='details-container'>
+                    <Button className='primary-btn'>
+                      View Details
+                    </Button>
+                    <div className='product-modal'>
+                      <h5>Main Features</h5>
+                      <p>{product.details}</p>
+                      {product.details}
+                    </div>
+                  </div>
+
+                </Card.Body>
+
+              </Card>
+            </Col>
+          ))}
+        </Row>
+
+        <Row className='banner'>
+          <Col md={8} lg={6}>
+            <h5>Our speciality is high-quality wood products at the best price</h5>
           </Col>
-          <Col xs={4} md={4} lg={3}>
-            <Image src={holder2} rounded />
+          <Col md={4} lg={6}>
+            <Image src={banner} />
           </Col>
-          <Col xs={0} md={0} lg={1} />
         </Row>
-        <Row className='text text-left'>
-          <h3>
-            Our specialty is high-quality wood products at the best price
-          </h3>
+
+        {/* SECONDARY */}
+        <Row>
+          <Col>
+            <div className='secondary-header'>
+              <h2>We also produce</h2>
+            </div>
+          </Col>
         </Row>
-        <img src={logo} className='logo' />
-        <Row className='secondary text-left'>
-          <h2>We also produce</h2>
+
+        {/* CAROUSEL */}
+        <Row>
+          <Col>
+            <div className='carousel-wrapper'>
+              <Carousell />
+            </div>
+          </Col>
         </Row>
-       <Carousell/>
+
       </Container>
     </div>
   );
-};
+}
 
 export default Blog;

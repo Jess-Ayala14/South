@@ -39,7 +39,7 @@ class Welcome extends Component {
           <Row>
             <Col xs={1} md={0} lg={2} />
             <Col xs={10} md={6} lg={4}>
-              <a href="#Blog">
+              <a href='#Blog'>
                 <Button>Our Products</Button>
               </a>
             </Col>

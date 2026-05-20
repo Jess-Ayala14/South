@@ -1,3 +1,7 @@
+.Contact{
+    z-index: 1;
+}
+
 div.Contact .container {
     padding-top: 35px;
 }

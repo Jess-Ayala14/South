@@ -1,3 +1,8 @@
+.About{
+    position: relative;
+    z-index: 1;
+}
+
 .About div.container {
     padding-top: 120px;
 }

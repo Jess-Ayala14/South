@@ -1,168 +1,453 @@
+/* =========================
+   BLOG BASE
+========================= */
+
 div.Blog {
     padding-top: 1px;
     background-color: rgb(232, 214, 185);
     min-height: 100vh;
+    height: auto;
+    overflow-x: hidden;
 }
 
 div.Blog .container {
     padding-top: 70px;
 }
 
-/* TITULOS */
-div.Blog .container h1,
-div.Blog .container h2,
-div.Blog .container h3 {
-    padding-bottom: 15px;
+/* =========================
+   TITLES
+========================= */
+
+.blog-header h1,
+.secondary-header h2 {
     text-align: center;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    color: #16436a;
+}
+
+.divider {
+    width: 80px;
+    height: 3px;
+    background-color: #000;
+    margin: 0 auto 25px auto;
+}
+
+/* =========================
+   PRODUCT CARDS (FIX HEIGHT)
+========================= */
+
+.product-row {
+    margin-top: 30px;
+}
+
+.product-card {
+    margin-left: 15px;
+    margin-right: 15px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-image-wrapper {
+    width: 100%;
+    height: 152px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.product-card .card-body {
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-card .card-title {
+    margin-top: -20px;
+    font-size: 24px;
+    color: #16436a;
     font-weight: bold;
 }
 
-/* LOGO */
-div.Blog .container img.logo {
-    display: block;
+.product-card .card-text {
+    font-size: 12px;
+    color: #16436a;
+    font-weight: bold;
+}
+
+.product-card .primary-btn {
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: #16436a;
+}
+
+.product-card .primary-btn {
+    margin-top: auto;
     width: 100%;
-    max-width: 350px;
-    height: auto;
-    margin: 20px auto;
     border: none;
+    background-color: #16436a;
 }
 
-/* SECCIONES */
-div.Blog .container .text,
-div.Blog .container .secondary {
-    padding-top: 35px;
+.product-card .details-btn:hover {
+    background-color: #16436a;
 }
 
-div.Blog .container .tertiary {
-    padding-top: 35px;
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* CARRUSEL */
-div.Blog .container .tertiary .carousel img {
+
+.product-image-wrapper img {
+    margin-top: 8px;
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.product-card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* =========================
+   MODAL HOVER EFFECT
+========================= */
+
+.Blog .details-container {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+/* MODAL BOX */
+.Blog .product-modal {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.85);
+
+    width: 280px;
+
+    background:
+        rgba(255,255,255,0.97);
+
+    backdrop-filter: blur(12px);
+
+    border-radius: 24px;
+
+    padding: 22px 20px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.18);
+
+    border: 1px solid #e5d8ca;
+
+    text-align: center;
+
+    z-index: 50;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease;
+}
+
+/* TITLE */
+.Blog .product-modal h5 {
+
+    font-size: 1.1rem;
+
+    font-weight: 700;
+
+    color: #173a63;
+
+    margin-bottom: 12px;
+}
+
+/* TEXT */
+.Blog .product-modal p {
+
+    font-size: 0.95rem;
+
+    line-height: 1.6;
+
+    color: #555;
+
+    margin: 0;
+}
+
+/* SHOW MODAL ON HOVER */
+.Blog .details-container:hover .product-modal {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translate(-50%, -130%)
+        scale(1);
+}
+
+
+/*--------------Banner---------*/
+
+div.Blog .banner {
+    background-color: rgba(0, 0, 40, 0.15);
+    border: 1px solid #16436a;
+    border-radius: 8px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+div.Blog .banner h5 {
+    font-size: 16px;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div.Blog .banner img {
+    width: 100%;
+    margin-top: 18px;
+    margin-bottom: 18px;
+
+}
+
+
+/* =========================
+   CAROUSEL FIXED SIZE
+========================= */
+
+.carousel-fixed {
     width: 100%;
     max-width: 350px;
-    height: auto;
+    /* 🔥 tamaño fijo del carrusel */
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* IMAGENES */
-div.Blog .container .row.dowel_pic img {
-    width: 170px;
+/* contenedor fijo que controla TODO */
+.carousel-frame {
+    width: 100%;
+    height: 250px;
+    /* ESTE ES EL TAMAÑO FIJO REAL */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* la imagen nunca cambia el tamaño del carrusel */
+.carousel-frame img {
     max-width: 100%;
-    height: auto;
-    border: 2px solid black;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* captions */
+.carousel-caption h5,
+.carousel-caption h6 {
+    font-weight: 600;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 /* =========================
    MOBILE
 ========================= */
+
 @media screen and (max-width: 480px) {
 
-    div.Blog .container {
-        padding-top: 40px;
-    }
-
-    div.Blog .container img.logo {
-        max-width: 220px;
-    }
-
-    div.Blog .container .row.dowel_pic img {
-        width: 100px;
-    }
-
-    div.Blog .container .tertiary .carousel img {
-        max-width: 220px;
-    }
-
-    div.Blog .container h1,
-    div.Blog .container h2,
-    div.Blog .container h3 {
-        padding-top: 20px;
-        padding-left: 25px;
-        padding-right: 25px;
+    .blog-header h1,
+    .secondary-header h2 {
+        margin-top: -35px;
+        font-size: 1.3rem;
         text-align: left;
-        font-size: 1.2rem;
+    }
+
+    .product-image-wrapper {
+        height: 180px;
+    }
+
+    .carousel-item img {
+        height: 150px;
+    }
+
+    .product-card {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .product-image-wrapper {
+        width: 100%;
+        height: 130px;
+        overflow: hidden;
+        flex-shrink: 0;
+        margin-bottom: 10px;
+    }
+
+    .product-card .card-body {
+        margin-top: 10px;
+        width: 150px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .product-card .card-title {
+        font-size: 15px;
+    }
+
+    .product-card .card-text {
+        font-size: 11px;
+    }
+
+
+    .carousel-wrapper {
+        margin-bottom: 20px;
+    }
+
+    .carousel-frame {
+        width: 100%;
+        height: 200px;
+        /* ESTE ES EL TAMAÑO FIJO REAL */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
     }
 }
 
 /* =========================
    TABLET
 ========================= */
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
-    div.Blog .container {
-        padding-top: 50px;
-    }
-
-    /* TITULOS */
-    div.Blog .container h1,
-    div.Blog .container h2,
-    div.Blog .container h3 {
+    .blog-header h1,
+    .secondary-header h2 {
         text-align: left;
-        padding-top: 15px;
-        padding-left: 50px;
-        padding-right: 0px;
     }
 
-    /* LOGO */
-    div.Blog .container img.logo {
-        display: block;
-        max-width: 300px;
-        margin: 0 auto 30px auto;
+    .product-image-wrapper {
+        height: 200px;
     }
 
-    /* TEXTO */
-    div.Blog .container .text,
-    div.Blog .container .secondary,
-    div.Blog .container .tertiary {
-        padding-left: 0px;
-        padding-right: 30px;
+    .carousel-item img {
+        height: 200px;
     }
 
-    /* CARRUSEL */
-    div.Blog .container .tertiary .carousel {
-        text-align: center;
+    .product-card {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
-    div.Blog .container .tertiary .carousel img {
-        max-width: 300px;
+    .product-image-wrapper {
         width: 100%;
-        height: auto;
+        height: 150px;
+        overflow: hidden;
+        flex-shrink: 0;
+        margin-bottom: -15px;
     }
 
-    /* IMAGENES */
-    div.Blog .container .row.dowel_pic img {
-        width: 140px;
+    .product-card .card-body {
+        margin-top: 0px;
+        width: 150px;
+        margin-left: auto;
+        margin-right: auto;
     }
+
+    .product-card .card-title {
+        font-size: 15px;
+    }
+
+    .product-card .card-text {
+        font-size: 11px;
+    }
+
 }
 
 /* =========================
-   LARGE DESKTOP
+   DESKTOP LARGE
 ========================= */
+
 @media screen and (min-width: 1400px) {
 
-    div.Blog .container {
-        max-width: 1320px;
+    .product-image-wrapper {
+        height: 260px;
+        margin-bottom: 15px;
     }
 
-    div.Blog .container h1,
-    div.Blog .container h2,
-    div.Blog .container h3 {
+    .carousel-item img {
+        height: 260px;
+    }
+
+    .product-card {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+
+    .product-image-wrapper {
+        width: 100%;
+        height: 170px;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    div.Blog .banner {
+        background-color: rgba(0, 0, 40, 0.15);
+        border: 1px solid #16436a;
+        border-radius: 8px;
+        margin-left: 395px;
+        margin-right: 395px;
+        margin-bottom: 20px;
+    }
+
+    div.Blog .banner h5 {
+        font-size: 13px;
         text-align: left;
-        padding-left: 180px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
-    div.Blog .container img.logo {
-        max-width: 420px;
+    div.Blog .banner img {
+        width: 80%;
+        margin-top: 18px;
+        margin-bottom: 18px;
+
     }
 
-    div.Blog .container .tertiary .carousel img {
-        max-width: 420px;
-    }
-
-    div.Blog .container .text,
-    div.Blog .container .secondary,
-    div.Blog .container .tertiary {
-        padding-left: 15px;
-        padding-right: 60px;
-    }
 }

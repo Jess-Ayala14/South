@@ -13,7 +13,7 @@ function About() {
         marginTop: '0px',
         backgroundPosition: '55%',
         backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
     }
 
     return (
