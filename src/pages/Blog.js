@@ -73,7 +73,6 @@ function Blog() {
                     <div className='product-modal'>
                       <h5>Main Features</h5>
                       <p>{product.details}</p>
-                      {product.details}
                     </div>
                   </div>
 

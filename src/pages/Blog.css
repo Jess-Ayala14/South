@@ -397,9 +397,7 @@ div.Blog .banner img {
 
 }
 
-/* =========================
-   DESKTOP LARGE
-========================= */
+/* ==== DESKTOP LARGE ===== */
 
 @media screen and (min-width: 1400px) {
 
@@ -451,3 +449,70 @@ div.Blog .banner img {
     }
 
 }
+
+/* ==== pantallas bajas ==== */
+@media screen and (max-height: 800px) {
+
+     .product-image-wrapper {
+        height: 180px;
+        margin-bottom: 15px;
+    }
+
+    .carousel-item img {
+        height: 260px;
+    }
+
+    .product-card {
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+
+
+    .product-image-wrapper {
+        width: 100%;
+        height: 170px;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    div.Blog .banner {
+        background-color: rgba(0, 0, 40, 0.15);
+        border: 1px solid #16436a;
+        border-radius: 8px;
+        margin-left: 385px;
+        margin-right: 385px;
+        margin-bottom: 20px;
+    }
+
+    div.Blog .banner h5 {
+        font-size: 13px;
+        text-align: left;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    div.Blog .banner img {
+        width: 80%;
+        margin-top: 18px;
+        margin-bottom: 18px;
+
+    }
+
+     .carousel-wrapper {
+        margin-bottom: 20px;
+    }
+
+    .carousel-frame {
+        width: 100%;
+        height: 200px;
+        /* ESTE ES EL TAMAÑO FIJO REAL */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+}
+

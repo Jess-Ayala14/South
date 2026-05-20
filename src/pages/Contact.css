@@ -59,10 +59,10 @@ div.Contact .container .form-group {
 /* =========================
    TABLET
 ========================= */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) {
 
     div.Contact .container {
-        padding-top: 90px;
+        padding-top: 70px;
     }
 
     div.Contact .container img {
@@ -76,16 +76,55 @@ div.Contact .container .form-group {
 }
 
 /* =========================
-   SMALL DESKTOP
+   LAPTOP / DESKTOP MEDIUM
 ========================= */
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
+@media screen and (min-width: 1024px) {
 
     div.Contact .container {
-        padding-top: 65px;
+        padding-top: 35px;
     }
 
     div.Contact .container img {
         width: 400px;
-        padding-top: 30px;
+        padding-top: 15px;
+    }
+
+    div.Contact .container .form .content-form {
+        padding-top: 25px;
+    }
+}
+
+/* =========================
+   DESKTOP LARGE
+========================= */
+@media screen and (min-width: 1400px) {
+
+    div.Contact .container img {
+        width: 550px;
+        padding-top: 80px;
+    }
+
+    div.Contact .container .form .content-form {
+        padding-top: 40px;
+    }
+}
+
+/* =========================
+   LOW HEIGHT SCREENS
+   (laptops 1366x768, etc)
+========================= */
+@media screen and (max-height: 800px) {
+
+    div.Contact .container {
+        padding-top: 20px;
+    }
+
+    div.Contact .container img {
+        padding-top: 10px;
+        width: 340px;
+    }
+
+    div.Contact .container .form .content-form {
+        padding-top: 15px;
     }
 }
